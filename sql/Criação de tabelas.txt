@@ -1,0 +1,35 @@
+CREATE TABLE dados(
+ID varchar(10),
+AtividadeFilename varchar(64),
+Latitude varchar(32),
+Longitude varchar(32),
+Altitude varchar(32),
+Speed double,
+Heartrate int,
+Cadence int,
+HoraEvento varchar(8),
+DataEvento varchar(32),
+gearRatioCalculado double,
+gearRatioConsiderado double,
+Marcha varchar(32),
+primary key (ID, AtividadeFilename)
+);
+
+CREATE TABLE atividade(
+IDatividade int AUTO_INCREMENT,
+AtividadeFilename varchar(64),
+IDatleta int,
+Configuracao varchar(32),
+DataInicio varchar(32),
+HoraInicio varchar(32),
+primary key(IDatividade)
+);
+
+CREATE TABLE atleta(
+IDatleta int NOT NULL AUTO_INCREMENT,
+Nome varchar(64),
+Idade int,
+Peso int,
+Altura int,
+primary key (IDatleta)
+);
